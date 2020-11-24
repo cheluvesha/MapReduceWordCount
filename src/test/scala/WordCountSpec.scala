@@ -1,11 +1,16 @@
-import java.util
+/***
+ * Dependency used Scala-test and Mrunit
+ */
 
+import java.util
 import com.WordCount.{WordCountMapper, WordCountReducer}
 import org.apache.hadoop.io.{IntWritable, LongWritable, Text}
 import org.apache.hadoop.mrunit.{MapDriver, MapReduceDriver, ReduceDriver}
 import org.scalatest.{BeforeAndAfter, FunSuite}
 
-
+/***
+ * WordCountSpec Which Verifies Mapper And Reducer Class
+ */
 class WordCountSpec extends FunSuite with BeforeAndAfter {
   var mapDriver: MapDriver[LongWritable, Text, Text, IntWritable] = _
   var reduceDriver: ReduceDriver[Text, IntWritable, Text, IntWritable] = _

@@ -1,13 +1,13 @@
 import com.WordCount.WordCount
 import org.scalatest.{FlatSpec, Matchers, _}
-
 import scala.io.Source
 
-
+/***
+ * Integration Test for WordCount Class
+ */
 class WordCountIntegrationSpec
     extends FlatSpec
-    with Matchers
-    with BeforeAndAfterEach {
+    with Matchers {
 
   "com/WordCount" should "write out word counts to output folder" in {
     WordCount.main(Array())
